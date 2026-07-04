@@ -1,6 +1,6 @@
 class VaccineError(Exception):
     def __init__(self, *args: object) -> None:
-        self.visitor_name = args
+        self.visitor_name = args[0]
         super().__init__(*args)
 
 
@@ -15,5 +15,4 @@ class OutdatedVaccineError(VaccineError):
 
 
 class NotWearingMaskError(Exception):
-    def __str__(self) -> str:
-        return "A visitor without a mask!"
+    pass
